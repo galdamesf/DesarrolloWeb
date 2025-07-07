@@ -77,6 +77,8 @@ Una aplicación web es interactiva porque:
 
 La clave está en que **las aplicaciones web crean un diálogo bidireccional** entre el usuario y el sistema, mientras que **los sitios web informativos principalmente presentan contenido de manera unidireccional**.
 
+---
+
 # ✅ ACTIVIDAD 2 – Anatomía de una aplicación web moderna
 ## **🎯 Objetivo**: Comprender los componentes principales de una app web (frontend, backend, base de datos).
 🔍 Conceptos Principales
