@@ -228,3 +228,225 @@ Mermaid Live: https://mermaid.live (online, gratuito)
 Draw.io: https://app.diagrams.net (diagramas visuales)
 Lucidchart: Para diagramas profesionales
 Figma: Para wireframes y diseños de UI
+
+---
+
+# ✅ ACTIVIDAD 3 – Explorando las herramientas de desarrollo
+🎯 Objetivo: Familiarizarse con las DevTools del navegador.
+---
+## **⌨️ Cómo Abrir DevTools**
+Por Sistema Operativo:
+Sistema OperativoMétodo 1Método 2Método 3🪟 WindowsF12Ctrl + Shift + IClick derecho → Inspeccionar🐧 LinuxF12Ctrl + Shift + IClick derecho → Inspeccionar🍎 MacF12Cmd + Option + IClick derecho → Inspeccionar
+Métodos Alternativos:
+
+Menú del navegador: Configuración → Más herramientas → DevTools
+Inspeccionar elemento: Click derecho en cualquier elemento → "Inspeccionar"
+
+---
+
+## **🔍 Explorando las Pestañas Principales**
+📋 1. Elements (Elementos)
+La pestaña Elements te permite inspeccionar y modificar el HTML y CSS de la página en tiempo real.
+Funcionalidades principales:
+
+Inspeccionar HTML: Ver la estructura completa del DOM
+Editar elementos: Modificar texto, atributos y etiquetas
+Estilos CSS: Ver y modificar estilos aplicados
+Computado: Ver los estilos finales calculados
+Responsive: Simular diferentes tamaños de pantalla
+
+Qué puedes hacer:
+
+Cambiar texto directamente en la página
+Modificar colores y estilos
+Agregar o eliminar elementos
+Ver qué CSS se está aplicando
+
+---
+
+## **🖥️ 2. Console (Consola)**
+La Console es donde se muestran mensajes, errores y warnings del JavaScript.
+Funcionalidades principales:
+
+Errores de JavaScript: Muestra errores y stack traces
+Warnings: Advertencias sobre código deprecated
+Logs: Mensajes de console.log() del desarrollador
+Ejecutar código: Puedes escribir JavaScript directamente
+
+Tipos de mensajes:
+
+🔴 Error: Errores críticos que rompen funcionalidad
+🟡 Warning: Advertencias sobre mejores prácticas
+🔵 Info: Información general del sistema
+⚪ Log: Mensajes de debug del desarrollador
+
+---
+
+## **🌐 3. Network (Red)**
+La pestaña Network muestra todas las solicitudes HTTP que hace la página.
+Funcionalidades principales:
+
+Solicitudes HTTP: GET, POST, PUT, DELETE
+Recursos: Imágenes, CSS, JavaScript, fuentes
+Tiempo de carga: Cuánto tarda cada recurso
+Tamaño: Bytes transferidos y sin comprimir
+Códigos de estado: 200, 404, 500, etc.
+
+Información que muestra:
+
+Name: Nombre del archivo o endpoint
+Status: Código de respuesta HTTP
+Type: Tipo de contenido (document, stylesheet, script)
+Size: Tamaño del archivo
+Time: Tiempo de descarga
+
+---
+
+## **💾 4. Storage (Almacenamiento)**
+La pestaña Storage (o Application en algunos navegadores) gestiona el almacenamiento local.
+Tipos de almacenamiento:
+
+Local Storage: Datos persistentes por dominio
+Session Storage: Datos temporales de la sesión
+Cookies: Pequeños archivos de texto
+IndexedDB: Base de datos local del navegador
+Cache: Archivos almacenados en caché
+
+---
+
+## **🔬 Ejercicio Práctico: Inspeccionando Google.com**
+Paso 1: Preparar el Entorno
+
+Abre tu navegador
+Ve a google.com
+Abre DevTools con F12 o Ctrl/Cmd + Shift + I
+Mantén DevTools abierto mientras navegas
+
+Paso 2: Capturar una Solicitud HTTP
+En la pestaña Network:
+
+Ve a la pestaña Network
+Actualiza la página (F5 o Ctrl/Cmd + R)
+Observa cómo se cargan los recursos
+
+Ejemplo de solicitud HTTP típica:
+GET https://www.google.com/
+Status: 200 OK
+Method: GET
+Response Headers:
+  - Content-Type: text/html; charset=UTF-8
+  - Set-Cookie: 1P_JAR=2025-01-15-10; expires=Thu, 14-Feb-2025 10:00:00 GMT
+  - Cache-Control: private, max-age=0
+Request Headers:
+  - User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+  - Accept: text/html,application/xhtml+xml
+Paso 3: Inspeccionar HTML de un Elemento
+En la pestaña Elements:
+
+Ve a la pestaña Elements
+Busca el logo de Google
+Haz click derecho en el logo → "Inspeccionar"
+
+Ejemplo de HTML típico:
+html<img class="lnXdpd" 
+     alt="Google" 
+     height="92" 
+     src="/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
+     width="272" 
+     data-atf="1" 
+     data-frt="0">
+     
+Paso 4: Buscar Errores en Consola
+En la pestaña Console:
+
+Ve a la pestaña Console
+Busca mensajes rojos (errores) o amarillos (warnings)
+Google generalmente es muy limpio, pero puedes encontrar warnings
+
+Posibles mensajes que podrías ver:
+javascript// Warning típico
+⚠️ [Deprecation] Synchronous XMLHttpRequest is deprecated
+
+// Error típico (si hubiera)
+❌ Uncaught TypeError: Cannot read property 'value' of null
+
+// Log informativo
+ℹ️ Google Analytics loaded successfully
+
+## **📸 Capturas Recomendadas**
+1. Solicitud HTTP Principal
+
+Captura la request principal de google.com
+Muestra el status 200, headers y timing
+
+2. Estructura HTML
+
+Inspecciona el elemento del logo de Google
+Muestra los atributos src, alt, width, height
+
+3. Recursos de Red
+
+Captura la lista completa de recursos cargados
+Muestra imágenes, CSS, JavaScript
+
+4. Almacenamiento Local
+
+Ve a Storage → Cookies
+Muestra las cookies que Google establece
+
+---
+
+## **🛠️ Consejos Prácticos**
+Para Desarrolladores:
+
+Usa el selector: Click en el icono de cursor para inspeccionar cualquier elemento
+Edita en vivo: Doble-click en cualquier texto para editarlo
+Copia elementos: Click derecho → Copy → Copy element
+Simula dispositivos: Click en el ícono de móvil para responsive design
+
+Para Depuración:
+
+Breakpoints: Pausa la ejecución de JavaScript
+Network throttling: Simula conexiones lentas
+Console.log(): Añade mensajes de debug en tu código
+Preserve log: Mantén los logs al navegar entre páginas
+
+---
+
+## **🎯 Actividades Adicionales**
+
+Experimenta con CSS:
+
+Cambia el color del logo de Google
+Modifica el tamaño de la barra de búsqueda
+
+
+Analiza Performance:
+
+Ve a la pestaña Performance
+Graba la carga de la página
+
+
+Explora APIs:
+
+En Console, ejecuta: navigator.geolocation.getCurrentPosition(console.log)
+Prueba: document.querySelector('input[name="q"]').value = 'DevTools'
+
+
+Inspecciona Cookies:
+
+Ve a Storage → Cookies
+Observa qué información guarda Google
+
+---
+
+## **🔒 Nota de Seguridad**
+Las DevTools son herramientas poderosas que te permiten:
+
+✅ Inspeccionar cualquier sitio web
+✅ Modificar la apariencia localmente
+✅ Analizar el código frontend
+❌ NO modificar el servidor real
+❌ NO acceder a datos de otros usuarios
+
+Los cambios que hagas solo son visibles para ti y se pierden al recargar la página.
