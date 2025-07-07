@@ -1,5 +1,5 @@
 # Desarrollo Web
-✅ ACTIVIDAD 1 – ¿Esto es una web o una app web?
+# ✅ ACTIVIDAD 1 – ¿Esto es una web o una app web?
 🎯 Objetivo: Comprender la diferencia entre un sitio web estático y una aplicación web interactiva.
 🔍 3 Ejemplos de Sitios Web Informativos
 
