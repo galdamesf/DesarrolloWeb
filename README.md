@@ -373,6 +373,8 @@ javascript// Warning típico
 // Log informativo
 ℹ️ Google Analytics loaded successfully
 
+---
+
 ## **📸 Capturas Recomendadas**
 1. Solicitud HTTP Principal
 
